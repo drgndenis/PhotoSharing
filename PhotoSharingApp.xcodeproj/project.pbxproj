@@ -15,6 +15,9 @@
 		E2EF2AD72A337782003DC6B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2EF2AD62A337782003DC6B1 /* Assets.xcassets */; };
 		E2EF2ADA2A337782003DC6B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2EF2AD82A337782003DC6B1 /* LaunchScreen.storyboard */; };
 		E2EF2AE22A345C8C003DC6B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2EF2AE12A345C8C003DC6B1 /* GoogleService-Info.plist */; };
+		E2FA1DBB2A34A2BF002FC6B8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA1DBA2A34A2BF002FC6B8 /* FeedViewController.swift */; };
+		E2FA1DBD2A34A2D1002FC6B8 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA1DBC2A34A2D1002FC6B8 /* UploadViewController.swift */; };
+		E2FA1DBF2A34A2DC002FC6B8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA1DBE2A34A2DC002FC6B8 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		E2EF2AD92A337782003DC6B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2EF2ADB2A337782003DC6B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2EF2AE12A345C8C003DC6B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E2FA1DBA2A34A2BF002FC6B8 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		E2FA1DBC2A34A2D1002FC6B8 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		E2FA1DBE2A34A2DC002FC6B8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +56,6 @@
 				54D36883135B148DA22CD1CA /* Pods-PhotoSharingApp.debug.xcconfig */,
 				D16B653641CFF183E65323FD /* Pods-PhotoSharingApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -86,6 +91,9 @@
 				E2EF2ACD2A337781003DC6B1 /* AppDelegate.swift */,
 				E2EF2ACF2A337781003DC6B1 /* SceneDelegate.swift */,
 				E2EF2AD12A337781003DC6B1 /* ViewController.swift */,
+				E2FA1DBA2A34A2BF002FC6B8 /* FeedViewController.swift */,
+				E2FA1DBC2A34A2D1002FC6B8 /* UploadViewController.swift */,
+				E2FA1DBE2A34A2DC002FC6B8 /* SettingsViewController.swift */,
 				E2EF2AD32A337781003DC6B1 /* Main.storyboard */,
 				E2EF2AD62A337782003DC6B1 /* Assets.xcassets */,
 				E2EF2AD82A337782003DC6B1 /* LaunchScreen.storyboard */,
@@ -212,8 +220,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2EF2AD22A337781003DC6B1 /* ViewController.swift in Sources */,
+				E2FA1DBD2A34A2D1002FC6B8 /* UploadViewController.swift in Sources */,
 				E2EF2ACE2A337781003DC6B1 /* AppDelegate.swift in Sources */,
+				E2FA1DBB2A34A2BF002FC6B8 /* FeedViewController.swift in Sources */,
 				E2EF2AD02A337781003DC6B1 /* SceneDelegate.swift in Sources */,
+				E2FA1DBF2A34A2DC002FC6B8 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
