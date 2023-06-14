@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,10 +30,11 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oV-G3-GB5">
                                 <rect key="frame" x="85" y="293" width="89" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="89" id="SDw-lO-knk"/>
+                                    <constraint firstAttribute="width" constant="89" id="Ds9-l8-eFH"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign In" cornerStyle="large">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -43,6 +45,7 @@
                                 <rect key="frame" x="219" y="293" width="89" height="39"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Register" cornerStyle="large">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -52,7 +55,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Photo Sharing App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4S-9A-MRZ">
                                 <rect key="frame" x="65" y="83" width="262" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="trn-SF-b1Y"/>
+                                    <constraint firstAttribute="height" constant="44" id="Sig-De-PN6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
@@ -62,20 +65,20 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GHK-fr-5dx" firstAttribute="leading" secondItem="G5d-ni-Pc6" secondAttribute="leading" id="AeC-h1-MCF"/>
-                            <constraint firstItem="GHK-fr-5dx" firstAttribute="top" secondItem="H4S-9A-MRZ" secondAttribute="bottom" constant="45" id="G9G-VN-eu6"/>
-                            <constraint firstItem="GHK-fr-5dx" firstAttribute="trailing" secondItem="G5d-ni-Pc6" secondAttribute="trailing" id="HaN-rP-icc"/>
-                            <constraint firstItem="H4S-9A-MRZ" firstAttribute="trailing" secondItem="GHK-fr-5dx" secondAttribute="trailing" id="Nqg-gb-CUD"/>
-                            <constraint firstItem="6oV-G3-GB5" firstAttribute="top" secondItem="G5d-ni-Pc6" secondAttribute="bottom" constant="24" id="OFv-iP-hBm"/>
-                            <constraint firstItem="H4S-9A-MRZ" firstAttribute="leading" secondItem="GHK-fr-5dx" secondAttribute="leading" id="Z3I-L9-T7c"/>
-                            <constraint firstItem="H4S-9A-MRZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="ak7-Sa-noU"/>
-                            <constraint firstItem="6oV-G3-GB5" firstAttribute="baseline" secondItem="Eyf-1N-53S" secondAttribute="baseline" id="dVi-vW-xff"/>
-                            <constraint firstItem="6oV-G3-GB5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="hO3-L3-DFI"/>
-                            <constraint firstItem="Eyf-1N-53S" firstAttribute="leading" secondItem="6oV-G3-GB5" secondAttribute="trailing" constant="45" id="iP5-5C-Vtm"/>
-                            <constraint firstItem="H4S-9A-MRZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jxO-uA-k8I"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eyf-1N-53S" secondAttribute="trailing" constant="85" id="l6x-1c-WmE"/>
-                            <constraint firstItem="G5d-ni-Pc6" firstAttribute="top" secondItem="GHK-fr-5dx" secondAttribute="bottom" constant="29" id="pMd-vs-xeO"/>
-                            <constraint firstItem="H4S-9A-MRZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="xDR-yo-4KM"/>
+                            <constraint firstItem="6oV-G3-GB5" firstAttribute="top" secondItem="G5d-ni-Pc6" secondAttribute="bottom" constant="24" id="GPH-Z3-82Q"/>
+                            <constraint firstItem="H4S-9A-MRZ" firstAttribute="trailing" secondItem="GHK-fr-5dx" secondAttribute="trailing" id="I7Q-3X-gaY"/>
+                            <constraint firstItem="GHK-fr-5dx" firstAttribute="top" secondItem="H4S-9A-MRZ" secondAttribute="bottom" constant="45" id="Kxi-Cl-D3O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eyf-1N-53S" secondAttribute="trailing" constant="85" id="W8w-6a-oMh"/>
+                            <constraint firstItem="H4S-9A-MRZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="Wo8-GX-qwp"/>
+                            <constraint firstItem="6oV-G3-GB5" firstAttribute="baseline" secondItem="Eyf-1N-53S" secondAttribute="baseline" id="XZJ-S6-azd"/>
+                            <constraint firstItem="Eyf-1N-53S" firstAttribute="leading" secondItem="6oV-G3-GB5" secondAttribute="trailing" constant="45" id="dhv-BA-GqN"/>
+                            <constraint firstItem="G5d-ni-Pc6" firstAttribute="top" secondItem="GHK-fr-5dx" secondAttribute="bottom" constant="29" id="fEJ-33-dHw"/>
+                            <constraint firstItem="H4S-9A-MRZ" firstAttribute="leading" secondItem="GHK-fr-5dx" secondAttribute="leading" id="gMC-xO-eZd"/>
+                            <constraint firstItem="GHK-fr-5dx" firstAttribute="leading" secondItem="G5d-ni-Pc6" secondAttribute="leading" id="oa2-vb-qTt"/>
+                            <constraint firstItem="GHK-fr-5dx" firstAttribute="trailing" secondItem="G5d-ni-Pc6" secondAttribute="trailing" id="oht-gs-dug"/>
+                            <constraint firstItem="H4S-9A-MRZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tQH-qm-AGM"/>
+                            <constraint firstItem="6oV-G3-GB5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="taq-H3-0Cx"/>
+                            <constraint firstItem="H4S-9A-MRZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="83" id="wPw-gJ-urG"/>
                         </constraints>
                     </view>
                     <connections>
@@ -100,7 +103,10 @@
                                 <rect key="frame" x="142" y="404" width="108" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Logout"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Logout">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="logoutPressed:" destination="5LU-80-L9R" eventType="touchUpInside" id="38Z-qk-mdJ"/>
                                 </connections>
@@ -109,14 +115,22 @@
                         <viewLayoutGuide key="safeArea" id="zpA-JO-OO4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="Rve-Br-B53"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="Rve-Br-B53">
+                        <imageReference key="image" image="gearshape" catalog="system" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color systemColor="systemYellowColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewController" modalPresentationStyle="fullScreen" id="lxJ-yX-9nh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vks-Tu-840" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="856"/>
+            <point key="canvasLocation" x="902" y="753"/>
         </scene>
         <!--Upload-->
         <scene sceneID="O5b-cc-t9c">
@@ -125,14 +139,62 @@
                     <view key="view" contentMode="scaleToFill" id="o4O-yW-0cg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="select" translatesAutoresizingMaskIntoConstraints="NO" id="Y8Z-98-TKO">
+                                <rect key="frame" x="38" y="126" width="317" height="200"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KoG-7Y-uUj">
+                                <rect key="frame" x="72.915853317254346" y="334.00000000002706" width="246" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lO-xz-6dA">
+                                <rect key="frame" x="139" y="376" width="115" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40.000000000012506" id="RRj-Zt-UnF"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="square.and.arrow.up.fill" catalog="system" title="Upload">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="uploadPressed:" destination="mDQ-VR-fCP" eventType="touchUpInside" id="ivu-hv-NXo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Z8v-s1-3YJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KoG-7Y-uUj" firstAttribute="centerX" secondItem="1lO-xz-6dA" secondAttribute="centerX" id="6Wu-3T-VQ1"/>
+                            <constraint firstItem="1lO-xz-6dA" firstAttribute="top" secondItem="KoG-7Y-uUj" secondAttribute="bottom" constant="8.0000000000032969" id="9J7-ej-jGc"/>
+                            <constraint firstItem="Y8Z-98-TKO" firstAttribute="centerX" secondItem="o4O-yW-0cg" secondAttribute="centerX" id="Auv-q1-dSf"/>
+                            <constraint firstItem="KoG-7Y-uUj" firstAttribute="top" secondItem="Y8Z-98-TKO" secondAttribute="bottom" constant="8.0000000000168257" id="ILF-dV-ddT"/>
+                            <constraint firstItem="Y8Z-98-TKO" firstAttribute="top" secondItem="Z8v-s1-3YJ" secondAttribute="top" constant="126.00000000001023" id="Plr-Cq-JIw"/>
+                            <constraint firstItem="Z8v-s1-3YJ" firstAttribute="bottom" secondItem="1lO-xz-6dA" secondAttribute="bottom" constant="386.99999999995714" id="Q2C-Wk-nAY"/>
+                            <constraint firstItem="Y8Z-98-TKO" firstAttribute="leading" secondItem="Z8v-s1-3YJ" secondAttribute="leading" constant="37.915853317256961" id="ba1-7b-1xM"/>
+                            <constraint firstItem="1lO-xz-6dA" firstAttribute="leading" secondItem="Z8v-s1-3YJ" secondAttribute="leading" constant="138.91585331724957" id="cs6-iA-Fdw"/>
+                            <constraint firstItem="KoG-7Y-uUj" firstAttribute="leading" secondItem="Z8v-s1-3YJ" secondAttribute="leading" constant="72.915853317254346" id="jxk-zC-oeQ"/>
+                            <constraint firstItem="Y8Z-98-TKO" firstAttribute="centerX" secondItem="KoG-7Y-uUj" secondAttribute="centerX" id="nuq-l9-PBQ"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Upload" image="square.and.arrow.up.fill" catalog="system" id="bEf-hC-W2c"/>
+                    <tabBarItem key="tabBarItem" title="Upload" id="bEf-hC-W2c">
+                        <imageReference key="image" image="square.and.arrow.up.fill" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemYellowColor"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="commentTextField" destination="KoG-7Y-uUj" id="TLH-el-UZj"/>
+                        <outlet property="imageView" destination="Y8Z-98-TKO" id="fHf-rI-kYW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0iP-Aw-kMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879" y="-7"/>
+            <point key="canvasLocation" x="1878.6259541984732" y="-7.042253521126761"/>
         </scene>
         <!--Feed-->
         <scene sceneID="sxp-CD-Z5M">
@@ -144,7 +206,15 @@
                         <viewLayoutGuide key="safeArea" id="ABh-se-YKD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" image="mosaic.fill" catalog="system" id="d7g-yu-xwx"/>
+                    <tabBarItem key="tabBarItem" title="Feed" id="d7g-yu-xwx">
+                        <imageReference key="image" image="mosaic.fill" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemYellowColor"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rf-v1-bcS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -158,7 +228,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C1a-uv-SGq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
@@ -175,15 +245,22 @@
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="mosaic.fill" catalog="system" width="128" height="114"/>
+        <image name="select" width="430" height="432.5"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
