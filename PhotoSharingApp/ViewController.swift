@@ -17,7 +17,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signInPressed(_ sender: Any) {
-        performSegue(withIdentifier: "toFeedVC", sender: nil)
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) {
+            (authResult, error) in
+                if let error = error {
+                    // Oturum acma islemi basarisiz olursa
+                    self.errorMessage(titleInput: "Hata", messageInput: error.localizedDescription)
+                } else {
+                    // Oturum acma islemi basarili olursa
+                    self.performSegue(withIdentifier: "toFeedVC", sender: nil)
+                }
+        }
     }
     
     @IBAction func registerPressed(_ sender: Any) {

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 import FirebaseStorage
 
 class UploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -34,24 +36,53 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func uploadPressed(_ sender: Any) {
+        // Fotografin firebase uzerine kaydedilmesi
         let storage = Storage.storage()
         let storageReference = storage.reference()
         let mediaFolder = storageReference.child("media")
         
         if let data = imageView.image?.jpegData(compressionQuality: 0.5) {
-            let imageReference = mediaFolder.child("image.jpg")
+            let uuid = UUID().uuidString
+
+            let imageReference = mediaFolder.child("\(uuid).jpg")
             imageReference.putData(data) { storageMetadata, error in
                 if error != nil {
-                    debugPrint(error?.localizedDescription ?? "")
+                    self.errorMessage(message: error?.localizedDescription ?? "Something went wrong!")
                 } else {
                     imageReference.downloadURL { url, error in
                         if error == nil {
                             let imageURL = url?.absoluteString
-                            debugPrint(imageURL ?? "")
+                            let firebaseDb = Firestore.firestore() // Database olusturma
+                            
+                            // Datababase'e eklenecek dokumanlari, kullanicinin girdigi verilerle ekleme
+                            let firebasePost: [String: Any] = [
+                                "imageURL": imageURL ?? self.errorMessage(message: "Failed to fetch imageURL"),
+                                "comment": self.commentTextField.text ?? self.errorMessage(message: "Failed to fetch comment"),
+                                "email": Auth.auth().currentUser?.email ?? self.errorMessage(message: "Failed to fetch email"),
+                                "date": FieldValue.serverTimestamp()
+                            ]
+                            // Database koleksiyon olusturma ve dokumanları ekleme
+                            firebaseDb.collection("Post").addDocument(data: firebasePost) { error in
+                                if error != nil {
+                                    self.errorMessage(message: error?.localizedDescription ?? "Something went wrong, try again.")
+                                } else {
+                                    // veriler basarili bir sekilde yuklenirse bizi Feed ekranina yollayip, imageView'ı ve commentTextField'ı eski haline getirecek
+                                    self.imageView.image = UIImage(named: "select")
+                                    self.commentTextField.text = nil
+                                    self.tabBarController?.selectedIndex = 0
+                                }
+                            }
                         }
                     }
                 }
             }
         }
+    }
+    
+    func errorMessage(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okButton)
+        self.present(alert, animated: true)
     }
 }

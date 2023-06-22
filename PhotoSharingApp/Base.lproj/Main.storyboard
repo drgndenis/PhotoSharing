@@ -140,18 +140,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="select" translatesAutoresizingMaskIntoConstraints="NO" id="Y8Z-98-TKO">
-                                <rect key="frame" x="38" y="126" width="317" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select" translatesAutoresizingMaskIntoConstraints="NO" id="Y8Z-98-TKO">
+                                <rect key="frame" x="38" y="106" width="317" height="315"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KoG-7Y-uUj">
-                                <rect key="frame" x="72.915853317254346" y="334.00000000002706" width="246" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lO-xz-6dA">
-                                <rect key="frame" x="139" y="376" width="115" height="40"/>
+                                <rect key="frame" x="139" y="471" width="115" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40.000000000012506" id="RRj-Zt-UnF"/>
+                                    <constraint firstAttribute="height" constant="40" id="49Z-fb-emi"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="square.and.arrow.up.fill" catalog="system" title="Upload">
@@ -162,20 +157,28 @@
                                     <action selector="uploadPressed:" destination="mDQ-VR-fCP" eventType="touchUpInside" id="ivu-hv-NXo"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KoG-7Y-uUj">
+                                <rect key="frame" x="73" y="429" width="247" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="grR-RV-8cg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z8v-s1-3YJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KoG-7Y-uUj" firstAttribute="centerX" secondItem="1lO-xz-6dA" secondAttribute="centerX" id="6Wu-3T-VQ1"/>
-                            <constraint firstItem="1lO-xz-6dA" firstAttribute="top" secondItem="KoG-7Y-uUj" secondAttribute="bottom" constant="8.0000000000032969" id="9J7-ej-jGc"/>
-                            <constraint firstItem="Y8Z-98-TKO" firstAttribute="centerX" secondItem="o4O-yW-0cg" secondAttribute="centerX" id="Auv-q1-dSf"/>
-                            <constraint firstItem="KoG-7Y-uUj" firstAttribute="top" secondItem="Y8Z-98-TKO" secondAttribute="bottom" constant="8.0000000000168257" id="ILF-dV-ddT"/>
-                            <constraint firstItem="Y8Z-98-TKO" firstAttribute="top" secondItem="Z8v-s1-3YJ" secondAttribute="top" constant="126.00000000001023" id="Plr-Cq-JIw"/>
-                            <constraint firstItem="Z8v-s1-3YJ" firstAttribute="bottom" secondItem="1lO-xz-6dA" secondAttribute="bottom" constant="386.99999999995714" id="Q2C-Wk-nAY"/>
-                            <constraint firstItem="Y8Z-98-TKO" firstAttribute="leading" secondItem="Z8v-s1-3YJ" secondAttribute="leading" constant="37.915853317256961" id="ba1-7b-1xM"/>
-                            <constraint firstItem="1lO-xz-6dA" firstAttribute="leading" secondItem="Z8v-s1-3YJ" secondAttribute="leading" constant="138.91585331724957" id="cs6-iA-Fdw"/>
-                            <constraint firstItem="KoG-7Y-uUj" firstAttribute="leading" secondItem="Z8v-s1-3YJ" secondAttribute="leading" constant="72.915853317254346" id="jxk-zC-oeQ"/>
-                            <constraint firstItem="Y8Z-98-TKO" firstAttribute="centerX" secondItem="KoG-7Y-uUj" secondAttribute="centerX" id="nuq-l9-PBQ"/>
+                            <constraint firstItem="KoG-7Y-uUj" firstAttribute="leading" secondItem="Z8v-s1-3YJ" secondAttribute="leading" constant="73" id="3TR-j1-arW"/>
+                            <constraint firstItem="KoG-7Y-uUj" firstAttribute="top" secondItem="Y8Z-98-TKO" secondAttribute="bottom" constant="8" id="8Pg-Va-cXl"/>
+                            <constraint firstItem="Y8Z-98-TKO" firstAttribute="top" secondItem="Z8v-s1-3YJ" secondAttribute="top" constant="106" id="8dL-aM-ivL"/>
+                            <constraint firstItem="KoG-7Y-uUj" firstAttribute="centerX" secondItem="o4O-yW-0cg" secondAttribute="centerX" id="L5L-CF-4l6"/>
+                            <constraint firstItem="Y8Z-98-TKO" firstAttribute="centerX" secondItem="KoG-7Y-uUj" secondAttribute="centerX" id="N6w-eJ-lRN"/>
+                            <constraint firstItem="1lO-xz-6dA" firstAttribute="leading" secondItem="Z8v-s1-3YJ" secondAttribute="leading" constant="139" id="l8A-83-EhJ"/>
+                            <constraint firstItem="1lO-xz-6dA" firstAttribute="top" secondItem="KoG-7Y-uUj" secondAttribute="bottom" constant="8" id="nIW-wP-eA1"/>
+                            <constraint firstItem="KoG-7Y-uUj" firstAttribute="centerX" secondItem="1lO-xz-6dA" secondAttribute="centerX" id="pVX-1F-pBd"/>
+                            <constraint firstItem="Y8Z-98-TKO" firstAttribute="leading" secondItem="Z8v-s1-3YJ" secondAttribute="leading" constant="38" id="tOm-Mm-eD2"/>
+                            <constraint firstItem="Z8v-s1-3YJ" firstAttribute="bottom" secondItem="1lO-xz-6dA" secondAttribute="bottom" constant="292" id="uKL-un-iig"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" id="bEf-hC-W2c">
