@@ -14,6 +14,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var commentTextField: UITextField!
+    var imageURL: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,27 +52,8 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                 } else {
                     imageReference.downloadURL { url, error in
                         if error == nil {
-                            let imageURL = url?.absoluteString
-                            let firebaseDb = Firestore.firestore() // Database olusturma
-                            
-                            // Datababase'e eklenecek dokumanlari, kullanicinin girdigi verilerle ekleme
-                            let firebasePost: [String: Any] = [
-                                "imageURL": imageURL ?? self.errorMessage(message: "Failed to fetch imageURL"),
-                                "comment": self.commentTextField.text ?? self.errorMessage(message: "Failed to fetch comment"),
-                                "email": Auth.auth().currentUser?.email ?? self.errorMessage(message: "Failed to fetch email"),
-                                "date": FieldValue.serverTimestamp()
-                            ]
-                            // Database koleksiyon olusturma ve dokumanları ekleme
-                            firebaseDb.collection("Post").addDocument(data: firebasePost) { error in
-                                if error != nil {
-                                    self.errorMessage(message: error?.localizedDescription ?? "Something went wrong, try again.")
-                                } else {
-                                    // veriler basarili bir sekilde yuklenirse bizi Feed ekranina yollayip, imageView'ı ve commentTextField'ı eski haline getirecek
-                                    self.imageView.image = UIImage(named: "select")
-                                    self.commentTextField.text = nil
-                                    self.tabBarController?.selectedIndex = 0
-                                }
-                            }
+                            self.imageURL = url?.absoluteString
+                            self.addInDatabase()
                         }
                     }
                 }
@@ -84,5 +66,28 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         let okButton = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okButton)
         self.present(alert, animated: true)
+    }
+    
+    func addInDatabase() {
+        let firebaseDb = Firestore.firestore()
+        
+        // Datababase'e eklenecek dokumanlari, kullanicinin girdigi verilerle ekleme
+        let firebasePost: [String: Any] = [
+            "imageURL": imageURL ?? self.errorMessage(message: "Failed to fetch imageURL"),
+            "comment": self.commentTextField.text ?? self.errorMessage(message: "Failed to fetch comment"),
+            "email": Auth.auth().currentUser?.email ?? self.errorMessage(message: "Failed to fetch email"),
+            "date": FieldValue.serverTimestamp()
+        ]
+        // Database koleksiyon olusturma ve dokumanları ekleme
+        firebaseDb.collection("Post").addDocument(data: firebasePost) { error in
+            if error != nil {
+                self.errorMessage(message: error?.localizedDescription ?? "Something went wrong, try again.")
+            } else {
+                // veriler basarili bir sekilde yuklenirse bizi Feed ekranina yollayip, imageView'ı ve commentTextField'ı eski haline getirecek
+                self.imageView.image = UIImage(named: "select")
+                self.commentTextField.text = nil
+                self.tabBarController?.selectedIndex = 0
+            }
+        }
     }
 }
