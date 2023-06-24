@@ -206,8 +206,67 @@
                     <view key="view" contentMode="scaleToFill" id="8AS-cQ-e77">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="O3c-fI-Leg">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="803"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="300" id="Oj8-3A-4fc" customClass="FeedCell" customModule="PhotoSharingApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oj8-3A-4fc" id="dqP-Px-8oo">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ga-cd-31p">
+                                                    <rect key="frame" x="19.999999999999996" y="11" width="42.666666666666657" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SqP-T9-gl3">
+                                                    <rect key="frame" x="20" y="40" width="353" height="214"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="353" id="J1h-RJ-Zek"/>
+                                                        <constraint firstAttribute="height" constant="214" id="OyQ-GV-gcf"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="214" id="SDw-q7-F72"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqE-nm-EWF">
+                                                    <rect key="frame" x="20" y="262" width="353" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SqP-T9-gl3" firstAttribute="leading" secondItem="4ga-cd-31p" secondAttribute="leading" id="2CL-c1-gQA"/>
+                                                <constraint firstItem="SqP-T9-gl3" firstAttribute="trailing" secondItem="JqE-nm-EWF" secondAttribute="trailing" id="CEx-Px-gHT"/>
+                                                <constraint firstItem="4ga-cd-31p" firstAttribute="top" secondItem="dqP-Px-8oo" secondAttribute="topMargin" id="Cla-TT-fl5"/>
+                                                <constraint firstItem="4ga-cd-31p" firstAttribute="leading" secondItem="dqP-Px-8oo" secondAttribute="leadingMargin" id="GfD-zp-iIh"/>
+                                                <constraint firstItem="JqE-nm-EWF" firstAttribute="top" secondItem="SqP-T9-gl3" secondAttribute="bottom" constant="8" id="Hie-ow-A6e"/>
+                                                <constraint firstItem="SqP-T9-gl3" firstAttribute="top" secondItem="4ga-cd-31p" secondAttribute="bottom" constant="8" id="ZCx-DY-3bc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="JqE-nm-EWF" secondAttribute="bottom" constant="6" id="pGA-4Z-RkR"/>
+                                                <constraint firstItem="SqP-T9-gl3" firstAttribute="leading" secondItem="JqE-nm-EWF" secondAttribute="leading" id="tgf-fl-AP1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="JqE-nm-EWF" id="Zhq-p8-7Rk"/>
+                                            <outlet property="emailLabel" destination="4ga-cd-31p" id="YAf-e4-2eo"/>
+                                            <outlet property="postImageView" destination="SqP-T9-gl3" id="kP9-Og-Tyk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ABh-se-YKD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O3c-fI-Leg" firstAttribute="bottom" secondItem="ABh-se-YKD" secondAttribute="bottom" id="NXH-BJ-qgs"/>
+                            <constraint firstItem="O3c-fI-Leg" firstAttribute="centerX" secondItem="8AS-cQ-e77" secondAttribute="centerX" id="RyN-wD-y43"/>
+                            <constraint firstItem="O3c-fI-Leg" firstAttribute="leading" secondItem="ABh-se-YKD" secondAttribute="leading" id="dSd-rt-xUv"/>
+                            <constraint firstItem="O3c-fI-Leg" firstAttribute="top" secondItem="ABh-se-YKD" secondAttribute="top" id="h53-eg-pXO"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" id="d7g-yu-xwx">
                         <imageReference key="image" image="mosaic.fill" catalog="system" renderingMode="hierarchical">
@@ -218,10 +277,13 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="O3c-fI-Leg" id="0pO-ua-nwo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rf-v1-bcS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879" y="-674"/>
+            <point key="canvasLocation" x="1878.6259541984732" y="-674.64788732394368"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mcH-Ue-wLn">

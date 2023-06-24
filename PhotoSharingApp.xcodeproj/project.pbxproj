@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E97C8896AD4227170E9FEE5 /* Pods_PhotoSharingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACAA0CCBB0A8ED3ECA9247E0 /* Pods_PhotoSharingApp.framework */; };
+		E2BA82D92A44E01700F18C5D /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BA82D82A44E01700F18C5D /* FeedCell.swift */; };
 		E2EF2ACE2A337781003DC6B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EF2ACD2A337781003DC6B1 /* AppDelegate.swift */; };
 		E2EF2AD02A337781003DC6B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EF2ACF2A337781003DC6B1 /* SceneDelegate.swift */; };
 		E2EF2AD22A337781003DC6B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EF2AD12A337781003DC6B1 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		54D36883135B148DA22CD1CA /* Pods-PhotoSharingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSharingApp.debug.xcconfig"; path = "Target Support Files/Pods-PhotoSharingApp/Pods-PhotoSharingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		ACAA0CCBB0A8ED3ECA9247E0 /* Pods_PhotoSharingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoSharingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D16B653641CFF183E65323FD /* Pods-PhotoSharingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSharingApp.release.xcconfig"; path = "Target Support Files/Pods-PhotoSharingApp/Pods-PhotoSharingApp.release.xcconfig"; sourceTree = "<group>"; };
+		E2BA82D82A44E01700F18C5D /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		E2EF2ACA2A337781003DC6B1 /* PhotoSharingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSharingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2EF2ACD2A337781003DC6B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2EF2ACF2A337781003DC6B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				E2FA1DBA2A34A2BF002FC6B8 /* FeedViewController.swift */,
 				E2FA1DBC2A34A2D1002FC6B8 /* UploadViewController.swift */,
 				E2FA1DBE2A34A2DC002FC6B8 /* SettingsViewController.swift */,
+				E2BA82D82A44E01700F18C5D /* FeedCell.swift */,
 				E2EF2AD32A337781003DC6B1 /* Main.storyboard */,
 				E2EF2AD62A337782003DC6B1 /* Assets.xcassets */,
 				E2EF2AD82A337782003DC6B1 /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2BA82D92A44E01700F18C5D /* FeedCell.swift in Sources */,
 				E2EF2AD22A337781003DC6B1 /* ViewController.swift in Sources */,
 				E2FA1DBD2A34A2D1002FC6B8 /* UploadViewController.swift in Sources */,
 				E2EF2ACE2A337781003DC6B1 /* AppDelegate.swift in Sources */,
@@ -373,6 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4HXT666CZK;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoSharingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -402,6 +407,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4HXT666CZK;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoSharingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

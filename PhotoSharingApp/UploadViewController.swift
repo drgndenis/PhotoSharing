@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import FirebaseFirestore
 import FirebaseAuth
+import FirebaseFirestore
 import FirebaseStorage
 
 class UploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -42,22 +42,29 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         let storageReference = storage.reference()
         let mediaFolder = storageReference.child("media")
         
-        if let data = imageView.image?.jpegData(compressionQuality: 0.5) {
-            let uuid = UUID().uuidString
+        // textField ve imageView doluysa veritabanina kaydedilecek
+        if commentTextField.text?.isEmpty == false && imageView.image != nil {
+            
+            if let data = imageView.image?.jpegData(compressionQuality: 0.5) {
+                let uuid = UUID().uuidString
 
-            let imageReference = mediaFolder.child("\(uuid).jpg")
-            imageReference.putData(data) { storageMetadata, error in
-                if error != nil {
-                    self.errorMessage(message: error?.localizedDescription ?? "Something went wrong!")
-                } else {
-                    imageReference.downloadURL { url, error in
-                        if error == nil {
-                            self.imageURL = url?.absoluteString
-                            self.addInDatabase()
+                let imageReference = mediaFolder.child("\(uuid).jpg")
+                imageReference.putData(data) { storageMetadata, error in
+                    if error != nil {
+                        self.errorMessage(message: error?.localizedDescription ?? "Something went wrong!")
+                    } else {
+                        imageReference.downloadURL { url, error in
+                            if error == nil {
+                                self.imageURL = url?.absoluteString
+                                self.addInDatabase()
+                            }
                         }
                     }
                 }
             }
+        } else {
+            // Gerekli şeyler eksikse hata donecek
+            errorMessage(message: "Error")
         }
     }
     
@@ -69,7 +76,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func addInDatabase() {
-        let firebaseDb = Firestore.firestore()
+        let firestoreDb = Firestore.firestore()
         
         // Datababase'e eklenecek dokumanlari, kullanicinin girdigi verilerle ekleme
         let firebasePost: [String: Any] = [
@@ -79,7 +86,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             "date": FieldValue.serverTimestamp()
         ]
         // Database koleksiyon olusturma ve dokumanları ekleme
-        firebaseDb.collection("Post").addDocument(data: firebasePost) { error in
+        firestoreDb.collection("Post").addDocument(data: firebasePost) { error in
             if error != nil {
                 self.errorMessage(message: error?.localizedDescription ?? "Something went wrong, try again.")
             } else {

@@ -6,24 +6,60 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
-class FeedViewController: UIViewController {
-
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    @IBOutlet weak var tableView: UITableView!
+    
+    var emails = [String]()
+    var comments = [String]()
+    var images = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        firebaseGetData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return emails.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedCell
+        
+        cell.emailLabel.text = emails[indexPath.row]
+        cell.commentLabel?.text = comments[indexPath.row]
+        return cell
+    }
+    
+    func firebaseGetData() {
+        let firestoreDb = Firestore.firestore()
+        firestoreDb.collection("Post").addSnapshotListener { snapshot, error in
+            if error != nil {
+                print(error?.localizedDescription ?? "Error")
+            } else {
+                // hata yoksa verilerin dbden getirilmesi
+                if snapshot?.isEmpty == false {
+                    for document in snapshot!.documents {
+                        
+                        if let email = document.get("email") as? String {
+                            self.emails.append(email)
+                        }
+                        
+                        if let comment = document.get("comment") as? String {
+                            self.comments.append(comment)
+                        }
+                        
+                        if let imageURL = document.get("imageURL") as? String {
+                            self.images.append(imageURL)
+                        }
+                    }
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
 }
