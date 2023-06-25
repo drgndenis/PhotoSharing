@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		051690925B05A1E6977DE800 /* Pods_PhotoSharingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65F848E38B1CCC245362B16 /* Pods_PhotoSharingApp.framework */; };
+		E24CFFE42A487C5700F720B0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24CFFE32A487C5700F720B0 /* Post.swift */; };
 		E2BA82D92A44E01700F18C5D /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BA82D82A44E01700F18C5D /* FeedCell.swift */; };
 		E2EF2ACE2A337781003DC6B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EF2ACD2A337781003DC6B1 /* AppDelegate.swift */; };
 		E2EF2AD02A337781003DC6B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EF2ACF2A337781003DC6B1 /* SceneDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		3D29F80F6AB8ECB06025A942 /* Pods-PhotoSharingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSharingApp.debug.xcconfig"; path = "Target Support Files/Pods-PhotoSharingApp/Pods-PhotoSharingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		94C4FB17A722E1D49E9CB649 /* Pods-PhotoSharingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSharingApp.release.xcconfig"; path = "Target Support Files/Pods-PhotoSharingApp/Pods-PhotoSharingApp.release.xcconfig"; sourceTree = "<group>"; };
+		E24CFFE32A487C5700F720B0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E2BA82D82A44E01700F18C5D /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		E2EF2ACA2A337781003DC6B1 /* PhotoSharingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSharingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2EF2ACD2A337781003DC6B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				E2FA1DBC2A34A2D1002FC6B8 /* UploadViewController.swift */,
 				E2FA1DBE2A34A2DC002FC6B8 /* SettingsViewController.swift */,
 				E2BA82D82A44E01700F18C5D /* FeedCell.swift */,
+				E24CFFE32A487C5700F720B0 /* Post.swift */,
 				E2EF2AD32A337781003DC6B1 /* Main.storyboard */,
 				E2EF2AD62A337782003DC6B1 /* Assets.xcassets */,
 				E2EF2AD82A337782003DC6B1 /* LaunchScreen.storyboard */,
@@ -225,6 +228,7 @@
 				E2BA82D92A44E01700F18C5D /* FeedCell.swift in Sources */,
 				E2EF2AD22A337781003DC6B1 /* ViewController.swift in Sources */,
 				E2FA1DBD2A34A2D1002FC6B8 /* UploadViewController.swift in Sources */,
+				E24CFFE42A487C5700F720B0 /* Post.swift in Sources */,
 				E2EF2ACE2A337781003DC6B1 /* AppDelegate.swift in Sources */,
 				E2FA1DBB2A34A2BF002FC6B8 /* FeedViewController.swift in Sources */,
 				E2EF2AD02A337781003DC6B1 /* SceneDelegate.swift in Sources */,
