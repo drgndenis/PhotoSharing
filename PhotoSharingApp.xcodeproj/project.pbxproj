@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E97C8896AD4227170E9FEE5 /* Pods_PhotoSharingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACAA0CCBB0A8ED3ECA9247E0 /* Pods_PhotoSharingApp.framework */; };
+		051690925B05A1E6977DE800 /* Pods_PhotoSharingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65F848E38B1CCC245362B16 /* Pods_PhotoSharingApp.framework */; };
 		E2BA82D92A44E01700F18C5D /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BA82D82A44E01700F18C5D /* FeedCell.swift */; };
 		E2EF2ACE2A337781003DC6B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EF2ACD2A337781003DC6B1 /* AppDelegate.swift */; };
 		E2EF2AD02A337781003DC6B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EF2ACF2A337781003DC6B1 /* SceneDelegate.swift */; };
@@ -22,9 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		54D36883135B148DA22CD1CA /* Pods-PhotoSharingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSharingApp.debug.xcconfig"; path = "Target Support Files/Pods-PhotoSharingApp/Pods-PhotoSharingApp.debug.xcconfig"; sourceTree = "<group>"; };
-		ACAA0CCBB0A8ED3ECA9247E0 /* Pods_PhotoSharingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoSharingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D16B653641CFF183E65323FD /* Pods-PhotoSharingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSharingApp.release.xcconfig"; path = "Target Support Files/Pods-PhotoSharingApp/Pods-PhotoSharingApp.release.xcconfig"; sourceTree = "<group>"; };
+		3D29F80F6AB8ECB06025A942 /* Pods-PhotoSharingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSharingApp.debug.xcconfig"; path = "Target Support Files/Pods-PhotoSharingApp/Pods-PhotoSharingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		94C4FB17A722E1D49E9CB649 /* Pods-PhotoSharingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSharingApp.release.xcconfig"; path = "Target Support Files/Pods-PhotoSharingApp/Pods-PhotoSharingApp.release.xcconfig"; sourceTree = "<group>"; };
 		E2BA82D82A44E01700F18C5D /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		E2EF2ACA2A337781003DC6B1 /* PhotoSharingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSharingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2EF2ACD2A337781003DC6B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		E2FA1DBA2A34A2BF002FC6B8 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		E2FA1DBC2A34A2D1002FC6B8 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		E2FA1DBE2A34A2DC002FC6B8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F65F848E38B1CCC245362B16 /* Pods_PhotoSharingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoSharingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,28 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E97C8896AD4227170E9FEE5 /* Pods_PhotoSharingApp.framework in Frameworks */,
+				051690925B05A1E6977DE800 /* Pods_PhotoSharingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02CA95105A42767EA71C573E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F65F848E38B1CCC245362B16 /* Pods_PhotoSharingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		95AF41B8B76A34092BDB939B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				54D36883135B148DA22CD1CA /* Pods-PhotoSharingApp.debug.xcconfig */,
-				D16B653641CFF183E65323FD /* Pods-PhotoSharingApp.release.xcconfig */,
+				3D29F80F6AB8ECB06025A942 /* Pods-PhotoSharingApp.debug.xcconfig */,
+				94C4FB17A722E1D49E9CB649 /* Pods-PhotoSharingApp.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		96E3F04A8268071B9B10AF5E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				ACAA0CCBB0A8ED3ECA9247E0 /* Pods_PhotoSharingApp.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E2EF2AC12A337781003DC6B1 = {
@@ -75,7 +75,7 @@
 				E2EF2ACC2A337781003DC6B1 /* PhotoSharingApp */,
 				E2EF2ACB2A337781003DC6B1 /* Products */,
 				95AF41B8B76A34092BDB939B /* Pods */,
-				96E3F04A8268071B9B10AF5E /* Frameworks */,
+				02CA95105A42767EA71C573E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,11 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2EF2ADE2A337782003DC6B1 /* Build configuration list for PBXNativeTarget "PhotoSharingApp" */;
 			buildPhases = (
-				FB7CA2475BECDD7E6D81D81B /* [CP] Check Pods Manifest.lock */,
+				FA9A87868C54AB214D0FB6A5 /* [CP] Check Pods Manifest.lock */,
 				E2EF2AC62A337781003DC6B1 /* Sources */,
 				E2EF2AC72A337781003DC6B1 /* Frameworks */,
 				E2EF2AC82A337781003DC6B1 /* Resources */,
-				28EE5BF1CB653C225C693D1F /* [CP] Embed Pods Frameworks */,
+				5BCC6B344E0776549F21829A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,7 +176,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		28EE5BF1CB653C225C693D1F /* [CP] Embed Pods Frameworks */ = {
+		5BCC6B344E0776549F21829A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -193,7 +193,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoSharingApp/Pods-PhotoSharingApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FB7CA2475BECDD7E6D81D81B /* [CP] Check Pods Manifest.lock */ = {
+		FA9A87868C54AB214D0FB6A5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,7 +370,7 @@
 		};
 		E2EF2ADF2A337782003DC6B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54D36883135B148DA22CD1CA /* Pods-PhotoSharingApp.debug.xcconfig */;
+			baseConfigurationReference = 3D29F80F6AB8ECB06025A942 /* Pods-PhotoSharingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -400,7 +400,7 @@
 		};
 		E2EF2AE02A337782003DC6B1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D16B653641CFF183E65323FD /* Pods-PhotoSharingApp.release.xcconfig */;
+			baseConfigurationReference = 94C4FB17A722E1D49E9CB649 /* Pods-PhotoSharingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

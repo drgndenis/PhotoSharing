@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
+import SDWebImage
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
@@ -31,6 +32,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedCell
         
         cell.emailLabel.text = emails[indexPath.row]
+        cell.postImageView.sd_setImage(with: URL(string: self.images[indexPath.row]))
         cell.commentLabel?.text = comments[indexPath.row]
         return cell
     }
@@ -42,7 +44,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print(error?.localizedDescription ?? "Error")
             } else {
                 // hata yoksa verilerin dbden getirilmesi
-                if snapshot?.isEmpty == false {
+                if snapshot?.isEmpty == false && snapshot != nil {
                     for document in snapshot!.documents {
                         
                         if let email = document.get("email") as? String {
